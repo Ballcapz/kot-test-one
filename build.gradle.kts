@@ -35,6 +35,7 @@ sonarqube {
         property("sonar.projectKey", "Ballcapz_kot-test-one")
         property("sonar.organization", "ballcapz")
         property("sonar.host.url", "https://sonarcloud.io")
+        property("sonar.coverage.jacoco.xmlReportPaths", "build/reports/coverage-result.xml")
     }
 }
 
