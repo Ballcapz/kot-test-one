@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm") version "1.6.21"
     id("org.jetbrains.kotlinx.kover") version "0.5.0"
+    id("org.sonarqube") version "3.3"
     application
 }
 
@@ -27,6 +28,14 @@ tasks.withType<KotlinCompile> {
 
 application {
     mainClass.set("MainKt")
+}
+
+sonarqube {
+    properties {
+        property("sonar.projectKey", "Ballcapz_kot-test-one")
+        property("sonar.organization", "ballcapz")
+        property("sonar.host.url", "https://sonarcloud.io")
+    }
 }
 
 kover {
