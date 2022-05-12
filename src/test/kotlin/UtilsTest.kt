@@ -1,3 +1,4 @@
+import com.pontotest.main
 import com.pontotest.utils.basisPoints
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
@@ -17,5 +18,13 @@ internal class UtilsTest {
        assertEquals(1f, result)
 
    }
+
+
+    @Test
+    fun `does it run`() {
+        val result = main(listOf("arg1", "arg2").toTypedArray())
+
+        assertEquals(Unit, result)
+    }
 
 }
