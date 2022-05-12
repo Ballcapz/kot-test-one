@@ -1,6 +1,7 @@
 package com.pontotest.utils
 
 import java.util.Calendar
+import java.util.TimeZone
 
 /**
  * Computes the percentage specified in bps from this amount object
@@ -61,6 +62,7 @@ enum class TimeOfDay {
 
 fun getTimeOfDay(timestamp: Long): TimeOfDay {
     val cal = Calendar.getInstance()
+    cal.timeZone = TimeZone.getTimeZone("PST")
     cal.timeInMillis = timestamp
     return when (cal.get(Calendar.HOUR_OF_DAY)) {
         in 6..11 -> TimeOfDay.MORNING

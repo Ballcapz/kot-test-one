@@ -40,7 +40,7 @@ internal class UtilsTest {
 
     @Test
     fun `five am is Night`() {
-        // 5 am, may 12, 2022
+        // 5 am, may 12, 2022 PDT
         val fiveAmTimestampMillis: Long = 1652356800000
 
         val result = getTimeOfDay(fiveAmTimestampMillis)
@@ -50,7 +50,7 @@ internal class UtilsTest {
 
     @Test
     fun `6 am is Morning`() {
-        // 6 am, may 12, 2022
+        // 6 am, may 12, 2022 PDT
         val sixAmTimestampMillis: Long = 1652360400000
 
         val result = getTimeOfDay(sixAmTimestampMillis)
