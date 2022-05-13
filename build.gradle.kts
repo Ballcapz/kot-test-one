@@ -36,11 +36,14 @@ sonarqube {
         property("sonar.organization", "ballcapz")
         property("sonar.host.url", "https://sonarcloud.io")
         property("sonar.coverage.jacoco.xmlReportPaths", "$buildDir/reports/jacoco.xml")
+        property("sonar.coverageReportPaths", "$buildDir/reports/jacoco.xml")
+
     }
 }
 
 kover {
-    generateReportOnCheck = false
+    generateReportOnCheck = true
+    isDisabled = false
 }
 
 tasks.test {
